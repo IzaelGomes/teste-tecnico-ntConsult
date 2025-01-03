@@ -1,5 +1,3 @@
-const index = () => {
+export const Dragons = () => {
   return <div>index</div>;
 };
-
-export default index;
