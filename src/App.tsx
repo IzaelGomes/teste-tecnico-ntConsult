@@ -1,12 +1,16 @@
 import { RouterProvider } from "react-router-dom";
 import { AuthContextProvider } from "./contexts/authContext";
 import { router } from "./routes";
+import { QueryClientProvider } from "react-query";
+import { queryClient } from "./lib/react-query";
 
 function App() {
   return (
-    <AuthContextProvider>
-      <RouterProvider router={router} />
-    </AuthContextProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthContextProvider>
+        <RouterProvider router={router} />
+      </AuthContextProvider>
+    </QueryClientProvider>
   );
 }
 
