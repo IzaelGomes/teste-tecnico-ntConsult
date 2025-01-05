@@ -1,5 +1,9 @@
 .dragon-card {
   background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -17,12 +21,10 @@
   .dragon-card__title {
     font-size: 1.5rem;
     color: #333;
-    margin-bottom: 12px;
     font-weight: bold;
   }
 
   .dragon-card__link {
-    display: inline-block;
     font-size: 1rem;
     color: var(--primary-700);
     text-decoration: none;
@@ -34,6 +36,19 @@
     &:hover {
       background-color: var(--primary-700);
       color: #fff;
+    }
+  }
+
+  .dragon-card__actions {
+    display: flex;
+    gap: 1rem;
+    .dragon-card__delete {
+      color: red;
+      cursor: pointer;
+    }
+    .dragon-card__update {
+      color: var(--primary-700);
+      cursor: pointer;
     }
   }
 }
