@@ -1,7 +1,7 @@
 export type TDragon = {
   id: string;
   name: string;
-  cratedAt: string;
+  createdAt: string;
   type: string;
-  histories: [];
+  histories: string[];
 };

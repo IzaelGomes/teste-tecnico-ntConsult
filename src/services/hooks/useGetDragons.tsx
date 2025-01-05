@@ -1,9 +1,10 @@
 import { useQuery } from "react-query";
-import { getAllDragons } from "../services/dragon";
+import { getAllDragons } from "../dragon";
 
 export const useGetDragons = () => {
   const data = useQuery({
     queryFn: getAllDragons,
+    queryKey: ["dragons"],
   });
   return data;
 };
