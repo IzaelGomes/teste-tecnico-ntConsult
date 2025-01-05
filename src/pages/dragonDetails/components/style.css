@@ -1,0 +1,43 @@
+.dragon-details {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .dragon-details__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .dragon-details__info {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+
+  .dragon-details__subtitle {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #444;
+  }
+
+  .dragon-details__list {
+    list-style: disc;
+    margin-left: 20px;
+    color: #666;
+  }
+
+  .dragon-details__item {
+    margin-bottom: 6px;
+  }
+
+  .dragon-details__no-history {
+    font-style: italic;
+    color: #888;
+  }
+}
