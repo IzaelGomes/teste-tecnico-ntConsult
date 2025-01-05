@@ -1,21 +1,24 @@
-import { FormEvent, useState } from "react";
 import "./style.css";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useNavigate } from "react-router-dom";
 import dragons from "../../assets/login-dragon.jpg";
 
 export const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const { handleUserSignIn } = useAuthContext();
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (handleUserSignIn(username, password)) {
+    const { username, password } = Object.fromEntries(
+      new FormData(e.currentTarget).entries()
+    );
+
+    if (handleUserSignIn(username as string, password as string)) {
       navigate("/dragons");
+
       return;
     }
+
     alert("Usuário inválido");
   };
 
@@ -29,8 +32,7 @@ export const Login = () => {
             <input
               type="text"
               id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              name="username"
               placeholder="Digite seu usuário"
               required
             />
@@ -40,8 +42,7 @@ export const Login = () => {
             <input
               type="password"
               id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              name="password"
               placeholder="Digite sua senha"
               required
             />
