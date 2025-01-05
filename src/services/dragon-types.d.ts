@@ -5,3 +5,5 @@ export type TDragon = {
   type: string;
   histories: string[];
 };
+
+export type TCreateDragon = Omit<TDragon, "id">;
