@@ -1,0 +1,39 @@
+.dragon-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .dragon-card__title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+
+  .dragon-card__link {
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--primary-700);
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid var(--primary-600);
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background-color: var(--primary-700);
+      color: #fff;
+    }
+  }
+}
