@@ -9,7 +9,7 @@ export const Dragons = () => {
   const { data } = useGetDragons();
   const orderedDragons = useMemo(() => orderDragonsByName(data), [data]);
   const { mutateAsync: deleteDragonMutate } = useDeleteDragon();
-
+  
   return (
     <div className="dragon-container">
       {orderedDragons.map((dragon) => (

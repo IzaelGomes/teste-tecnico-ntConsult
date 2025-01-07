@@ -18,8 +18,8 @@ export const DragonForm = ({ onSubmit, dragonData }: CreateDragonFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmitDragon} className="create-dragon__form">
-      <div className="create-dragon__field">
+    <form onSubmit={handleSubmitDragon} className="dragon__form">
+      <div className="dragon__field">
         <label htmlFor="name">Nome:</label>
         <input
           type="text"
@@ -31,7 +31,7 @@ export const DragonForm = ({ onSubmit, dragonData }: CreateDragonFormProps) => {
         />
       </div>
 
-      <div className="create-dragon__field">
+      <div className="dragon__field">
         <label htmlFor="type">Tipo:</label>
         <input
           aria-label="type"
@@ -43,7 +43,7 @@ export const DragonForm = ({ onSubmit, dragonData }: CreateDragonFormProps) => {
         />
       </div>
 
-      <button type="submit" className="create-dragon__button">
+      <button type="submit" className="dragon__button_submit">
         Enviar
       </button>
     </form>

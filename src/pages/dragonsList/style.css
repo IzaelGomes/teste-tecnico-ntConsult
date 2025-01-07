@@ -1,6 +1,17 @@
 .dragon-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 400px));
   gap: 3rem;
+}
+
+@media (max-width: 1004px) {
+  .dragon-container {
+    grid-template-columns: repeat(2, minmax(200px, 400px));
+  }
+}
+
+@media (max-width: 690px) {
+  .dragon-container {
+    grid-template-columns: repeat(1, minmax(200px, 400px));
+  }
 }

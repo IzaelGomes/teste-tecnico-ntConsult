@@ -1,3 +1,4 @@
+import "./style.css";
 import { TDragon } from "../../../services/dragon-types";
 import { formatDate } from "../../../utils";
 

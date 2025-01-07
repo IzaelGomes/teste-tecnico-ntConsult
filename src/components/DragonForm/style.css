@@ -1,9 +1,9 @@
-.create-dragon__form {
+.dragon__form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 
-  .create-dragon__field {
+  .dragon__field {
     display: flex;
     flex-direction: column;
 
@@ -21,7 +21,7 @@
     }
   }
 
-  .create-dragon__button {
+  .dragon__button_submit {
     padding: 10px 15px;
     font-size: 16px;
     color: #fff;
@@ -31,7 +31,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: var(--primary-600);
+      opacity: 0.9;
     }
   }
 }
