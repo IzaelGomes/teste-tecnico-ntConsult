@@ -1,33 +1,20 @@
-import { useMutation } from "react-query";
-import { createDragon } from "../../services/dragon";
 import "./style.css";
 import {
   DragonForm,
   DragonFormData,
 } from "../../components/DragonForm/dragonForm";
+import { useCreateDragon } from "../../services/hooks/useCreateDragon";
 
 export const CreateDragon = () => {
-  const { mutateAsync: createDragonMutate } = useMutation({
-    mutationFn: createDragon,
-    onSuccess: () => {
-      alert("Dragão criado com sucesso!");
-    },
-    onError: () => {
-      console.log("Erro ao criar o dragão.");
-    },
-  });
+  const { mutateAsync: createDragonMutate } = useCreateDragon();
 
   const handleCreateDragon = async (dragonData: DragonFormData) => {
-    try {
-      await createDragonMutate({
-        name: dragonData.name,
-        type: dragonData.type,
-        createdAt: new Date().toString(),
-        histories: [],
-      });
-    } catch (error) {
-      console.error("Erro ao criar o dragão:", error);
-    }
+    await createDragonMutate({
+      name: dragonData.name,
+      type: dragonData.type,
+      createdAt: new Date().toString(),
+      histories: [],
+    });
   };
 
   return (
