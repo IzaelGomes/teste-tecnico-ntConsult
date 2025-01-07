@@ -32,13 +32,18 @@ describe("CreateDragon", () => {
     };
     const mockOnSubmit = vi.fn();
 
-    render(<DragonForm onSubmit={mockOnSubmit} dragonData={mockDragon} />);
+    render(
+      <DragonForm onSubmit={mockOnSubmit} defaultDragonData={mockDragon} />
+    );
 
     const inputName = screen.getByLabelText("name");
     const inputType = screen.getByLabelText("type");
+
     expect(inputName).toHaveValue("Dreamfyre");
     expect(inputType).toHaveValue("7");
+
     fireEvent.submit(screen.getByRole("button", { name: /enviar/i }));
+
     expect(mockOnSubmit).toHaveBeenCalledWith({
       name: "Dreamfyre",
       type: "7",

@@ -4,10 +4,10 @@ export type DragonFormData = Pick<TDragon, "name" | "type">;
 
 interface CreateDragonFormProps {
   onSubmit: (data: DragonFormData) => void;
-  dragonData?: DragonFormData;
+  defaultDragonData?: DragonFormData;
 }
 
-export const DragonForm = ({ onSubmit, dragonData }: CreateDragonFormProps) => {
+export const DragonForm = ({ onSubmit, defaultDragonData }: CreateDragonFormProps) => {
   const handleSubmitDragon = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -27,7 +27,7 @@ export const DragonForm = ({ onSubmit, dragonData }: CreateDragonFormProps) => {
           name="name"
           id="name"
           required
-          defaultValue={dragonData?.name}
+          defaultValue={defaultDragonData?.name}
         />
       </div>
 
@@ -38,7 +38,7 @@ export const DragonForm = ({ onSubmit, dragonData }: CreateDragonFormProps) => {
           type="text"
           name="type"
           id="type"
-          defaultValue={dragonData?.type}
+          defaultValue={defaultDragonData?.type}
           required
         />
       </div>

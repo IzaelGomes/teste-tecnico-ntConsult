@@ -28,7 +28,7 @@ export const UpdateDragon = () => {
   return (
     <div className="edit-dragon">
       <h1 className="edit-dragon__title">Editar Dragão</h1>
-      <DragonForm dragonData={data} onSubmit={handleUpdateDragon} />
+      <DragonForm defaultDragonData={data} onSubmit={handleUpdateDragon} />
     </div>
   );
 };
