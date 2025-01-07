@@ -30,9 +30,9 @@ export const DragonCard = ({ data, onDelete }: DragonCardProps) => {
           <Trash2 className="dragon-card__delete" />
         </button>
 
-        <button>
+        <Link to={`/dragons/update/${data.id}`}>
           <Pencil aria-label="editar" className="dragon-card__update" />
-        </button>
+        </Link>
       </div>
     </div>
   );

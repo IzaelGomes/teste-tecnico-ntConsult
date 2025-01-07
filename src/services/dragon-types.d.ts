@@ -7,3 +7,5 @@ export type TDragon = {
 };
 
 export type TCreateDragon = Omit<TDragon, "id">;
+
+export type TUpdateDragon = Omit<TDragon, "createdAt">;

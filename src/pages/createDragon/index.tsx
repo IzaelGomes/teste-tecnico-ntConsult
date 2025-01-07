@@ -2,9 +2,9 @@ import { useMutation } from "react-query";
 import { createDragon } from "../../services/dragon";
 import "./style.css";
 import {
-  CreateDragonForm,
+  DragonForm,
   DragonFormData,
-} from "./components/createDragonForm";
+} from "../../components/DragonForm/dragonForm";
 
 export const CreateDragon = () => {
   const { mutateAsync: createDragonMutate } = useMutation({
@@ -33,7 +33,7 @@ export const CreateDragon = () => {
   return (
     <div className="create-dragon">
       <h1 className="create-dragon__title">Criar Dragão</h1>
-      <CreateDragonForm onCreate={handleCreateDragon} />
+      <DragonForm onSubmit={handleCreateDragon} />
     </div>
   );
 };

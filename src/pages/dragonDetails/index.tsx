@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useGetDragon } from "../../services/hooks/useGetDragon";
-import "./style.css";
 import { DragonCardDetails } from "./components/dragonCardDetails";
 
 export const DragonDetails = () => {

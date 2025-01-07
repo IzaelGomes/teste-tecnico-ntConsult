@@ -1,5 +1,5 @@
 import { api } from "../lib/axios";
-import { TCreateDragon, TDragon } from "./dragon-types";
+import { TCreateDragon, TDragon, TUpdateDragon } from "./dragon-types";
 
 export const getAllDragons = async () => {
   const { data } = await api.get<TDragon[]>("/dragon");
@@ -17,8 +17,8 @@ export const createDragon = async (dragon: TCreateDragon) => {
   await api.post(`/dragon`, dragon);
 };
 
-export const updateDragon = async (id: string) => {
-  await api.put(`/dragon/${id}`);
+export const updateDragon = async (dragon: TUpdateDragon) => {
+  await api.put(`/dragon/${dragon.id}`, dragon);
 };
 
 export const deleteDragon = async (id: string) => {
