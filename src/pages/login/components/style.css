@@ -1,12 +1,10 @@
 .login-form {
   width: 100%;
   display: flex;
-  align-items: center;
   flex-direction: column;
 
   .login-form__title {
     font-family: UnifrakturMaguntia;
-    text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
     color: #333;
@@ -24,8 +22,7 @@
     }
 
     .login-form__input {
-      max-width: 400px;
-      width: 100%;
+      width: 80%;
       padding: 10px;
       font-size: 14px;
       border: 1px solid #ccc;
@@ -37,7 +34,7 @@
   }
 
   .login-form__button {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     font-size: 16px;
     color: #fff;
