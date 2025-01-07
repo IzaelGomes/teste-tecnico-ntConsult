@@ -26,7 +26,7 @@ export const DragonCard = ({ data, onDelete }: DragonCardProps) => {
             aria-label="excluir"
             onClick={() => onDelete?.(data.id)}
           >
-            <Trash2 size={24} className="dragon-card__delete_icon" />
+            <Trash2 size={24} className="dragon-card__delete-icon" />
           </button>
           <Link to={`/dragons/update/${data.id}`}>
             <Pencil
