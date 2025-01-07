@@ -17,5 +17,7 @@ describe("dragonCardDetails", () => {
 
     expect(screen.getByText(`05/01/2025`)).toBeInTheDocument();
     expect(screen.getByText(/Sunfyre/)).toBeInTheDocument();
+    expect(screen.getByText("2")).toBeInTheDocument();
+    expect(screen.getByText(/Sem histórias registradas./)).toBeInTheDocument();
   });
 });
