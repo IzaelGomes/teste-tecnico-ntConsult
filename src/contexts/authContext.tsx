@@ -8,11 +8,16 @@ export type TAuthContext = {
 export const AuthContext = createContext<null | TAuthContext>(null);
 
 export const AuthContextProvider = ({ children }: PropsWithChildren) => {
-  const [user, setUser] = useState<string>();
+  const [user, setUser] = useState<string | undefined>(() => {
+    const user = localStorage.getItem("auth");
+    if (user) return user;
+
+    return;
+  });
 
   const handleUserSignIn = (user: string, password: string) => {
     if (user === "admin" && password === "123456") {
-      setUser("Dragão");
+      setUser("admin");
       localStorage.setItem("auth", user);
       return true;
     }

@@ -7,13 +7,35 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .header__infor{
+      display: flex;
+      gap:1rem;
+      .header_user{
+        padding:5px;
+        display: flex;
+        flex-direction:column;
+        gap:3px;
+        align-items:center;
+
+        .header_user_icon{
+          background: var(--primary-700);
+          color:#fff;
+          padding:4px;
+          border-radius: 100px;
+        }
+
+        .header_user_name{
+          font-size:15px;
+        }
+      }
+    }
   }
 
   .header__link {
     text-decoration: none;
     color: #333;
     font-size: 16px;
-    margin-right: 20px;
 
     &:hover {
       color: var(--primary-700);;
@@ -23,10 +45,21 @@
   .header__actions {
     display: flex;
     align-items: center;
+
+    .header__link--action{
+      background:var(--primary-700);
+      color:#fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+
+      &:hover{
+        opacity: 0.9;
+      }
+    }
   }
 
   .header__button {
-    background-color: #dc3545;
+    background-color:#dc3545;
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -34,9 +67,9 @@
     cursor: pointer;
     border-radius: 4px;
     margin-left: 20px;
-
+    
     |&:hover {
-      background-color: #c82333;
+      background-color:#c82333;
     }
   }
 }
