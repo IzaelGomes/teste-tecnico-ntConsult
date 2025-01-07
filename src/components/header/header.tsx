@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
 import "./header.css";
-import { useAuthContext } from "../../hooks/useAuthContext";
-import { User } from 'lucide-react'
+import { LogOut } from "lucide-react";
 
 export const Header = () => {
-  const { username } = useAuthContext();
-
   const handleLogout = () => {
     window.location.href = "/";
     localStorage.clear();
@@ -18,19 +15,15 @@ export const Header = () => {
           Home
         </Link>
         <div className="header__infor">
-          <div className="header_user">
-          <User className="header_user_icon" size={19}/>
-          <span className="header_user_name">{username}</span>
-          </div>
           <div className="header__actions">
             <Link
               to="/dragons/create"
-              className="header__link header__link--action"
+              className="header__action"
             >
               Criar Dragão
             </Link>
-            <button className="header__button" onClick={handleLogout}>
-              Logout
+            <button className="header__button" onClick={handleLogout} aria-label="sair">
+              <LogOut size={22}/>
             </button>
           </div>
         </div>

@@ -2,8 +2,13 @@ import { createContext, PropsWithChildren, useState } from "react";
 
 export type TAuthContext = {
   username?: string;
-  handleUserSignIn: (user: string, password: string) => boolean;
+  handleUserSignIn: (data: UserData) => boolean;
 };
+
+export type UserData = {
+  user:string
+  password:string
+}
 
 export const AuthContext = createContext<null | TAuthContext>(null);
 
@@ -15,13 +20,14 @@ export const AuthContextProvider = ({ children }: PropsWithChildren) => {
     return;
   });
 
-  const handleUserSignIn = (user: string, password: string) => {
+  const handleUserSignIn = ({password, user} : UserData) => {
     if (user === "admin" && password === "123456") {
       setUser("admin");
       localStorage.setItem("auth", user);
-      return true;
+      return true
     }
-    return false;
+
+    return false
   };
 
   return (

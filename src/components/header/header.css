@@ -35,7 +35,8 @@
   .header__link {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-family:UnifrakturMaguntia;
+    font-size: 26px;
 
     &:hover {
       color: var(--primary-700);;
@@ -46,11 +47,12 @@
     display: flex;
     align-items: center;
 
-    .header__link--action{
+    .header__action{
       background:var(--primary-700);
       color:#fff;
       padding: 8px 16px;
       border-radius: 4px;
+      text-decoration:none;
 
       &:hover{
         opacity: 0.9;
@@ -59,17 +61,13 @@
   }
 
   .header__button {
-    background-color:#dc3545;
-    color: #fff;
+    color: #00000080;
     border: none;
-    padding: 8px 16px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
     margin-left: 20px;
+    background: transparent;
     
-    |&:hover {
-      background-color:#c82333;
-    }
   }
 }
